@@ -5,22 +5,22 @@ var pizzaApp = angular.module('pizzaApp', ['ngRoute']);
 pizzaApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/home', {
-    template: 'views/templates/home.html',
+    templateUrl: 'views/templates/home.html',
     controller: 'HomeController',
     controllerAs: 'home'
   })
   .when('/order', {
-    template: 'views/templates/order.html',
+    templateUrl: 'views/templates/order.html',
     controller: 'OrderController',
     controllerAs: 'order'
   })
   .when('/cart', {
-    template: 'views/templates/cart.html',
+    templateUrl: 'views/templates/cart.html',
     controller: 'CartController',
     controllerAs: 'cart'
   })
-  .when('/confrim', {
-    template: 'views/templates/confirm.html',
+  .when('/confirm', {
+    templateUrl: 'views/templates/confirm.html',
     controller: 'ConfirmController',
     controllerAs: 'confirm'
   })
