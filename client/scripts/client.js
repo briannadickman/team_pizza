@@ -1,6 +1,6 @@
 /* ngRouter injection, allows pizzaApp to use angular-route */
 
-var pizzaApp = angular.module('pizzaApp', ['ngRouter']);
+var pizzaApp = angular.module('pizzaApp', ['ngRoute']);
 
 pizzaApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
