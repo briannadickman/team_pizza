@@ -23,3 +23,7 @@ h1{
 ul{
   margin-left: 25px;
 }
+
+.dropdown {
+  position: relative;
+}
