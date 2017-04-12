@@ -19,7 +19,7 @@ pizzaApp.config(['$routeProvider', function($routeProvider) {
     controller: 'CartController',
     controllerAs: 'cart'
   })
-  .when('/confrim', {
+  .when('/confirm', {
     template: 'views/templates/confirm.html',
     controller: 'ConfirmController',
     controllerAs: 'confirm'
