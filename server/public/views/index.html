@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="pizzaApp">
+<html ng-app = 'pizzaApp'>
   <head>
     <meta charset="utf-8">
 
@@ -15,12 +15,13 @@
 
   </head>
   <body>
-    <h1>welcome to the pizza shop. On index.html</p>
+    <div class = 'container>'
     <!-- NAV BAR -->
     <div ng-include="'views/partials/nav.html'"></div>
 
     <!-- MAIN CONTENT -->
     <main ng-view></main>
 
+  </div>
   </body>
 </html>
