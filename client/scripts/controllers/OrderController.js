@@ -7,13 +7,17 @@ pizzaApp.controller('OrderController', ['PizzaService', function(PizzaService){
     toppings : []
   };
 
+
   order.pizzaObj = PizzaService.pizzaObj;
+
+  order.pizzaOrder = pizzaOrder;
+
 
   order.pizzaSize = function(size) {
     console.log('size chosen: ', size);
     newPizzaOrder.size = size;
     console.log(newPizzaOrder);
-    
+
     newPizzaOrder.toppings.push(topping);
   };
 

@@ -23,6 +23,7 @@ pizzaApp.factory('PizzaService', function() {
   return {
     pizzaObj: pizzaObj,
     pizzaOrder: pizzaOrder,
+    orderedPizza: orderedPizza,
     addPizzaToOrder: addPizzaToOrder,
   };
 

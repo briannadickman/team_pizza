@@ -4,27 +4,24 @@ pizzaApp.controller('CartController', ['PizzaService', function(PizzaService){
 
   var cart = this;
 
-  cart.test = PizzaService.test;
 
-  cart.testPizzaOrder = function() {
-    var pizza1 = {
-      size: small,
-      topings: pinneapple,
-      total: 7
-    };
-    var pizza2 = {
-      size: large,
-      topings: salmon,
-      total: 7
-    };
-
-    var pizzaArray = [pizza1, pizza2];
-
-    var pizzaOrder = {
-      order: pizzaArray};
-
-    console.log(pizzaOrder);
-
+//Mock pizza order to test appending method
+  var pizza1 = {
+    size: "small",
+    toppings: "pinneapple",
+    total: 7
   };
+  var pizza2 = {
+    size: "large",
+    toppings: "salmon",
+    total: 7
+  };
+  var pizzaArray = [pizza1, pizza2];
+
+
+  cart.pizzaOrder = {order: pizzaArray};
+
+
+
 
 }]);
