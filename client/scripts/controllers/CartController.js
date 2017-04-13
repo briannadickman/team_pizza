@@ -9,12 +9,12 @@ pizzaApp.controller('CartController', ['PizzaService', function(PizzaService){
   var pizza1 = {
     size: "small",
     toppings: "pinneapple",
-    total: 7
+    total: 6
   };
   var pizza2 = {
     size: "large",
     toppings: "salmon",
-    total: 7
+    total: 8
   };
   var pizzaArray = [pizza1, pizza2];
 
