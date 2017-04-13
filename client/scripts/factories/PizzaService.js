@@ -5,7 +5,9 @@ pizzaApp.factory('PizzaService', function() {
     lg: 8,
     toppings: toppings
   };
+
   var toppings = ['salmon', 'mushroon', 'pineapple', 'macNcheese', 'shrimp'];
+
   //toppings: salmon, mushroom, pinneapple, macNcheese, shrimp
   var pizzaOrder = {};
   var orderedPizza = [];
@@ -22,7 +24,8 @@ pizzaApp.factory('PizzaService', function() {
   return {
     pizzaObj: pizzaObj,
     pizzaOrder: pizzaOrder,
-    addPizzaToOrder: addPizzaToOrder
+    addPizzaToOrder: addPizzaToOrder,
+    orderedPizza: orderedPizza
   };
 
 });
