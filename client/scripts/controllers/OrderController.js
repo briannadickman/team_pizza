@@ -2,42 +2,36 @@ pizzaApp.controller('OrderController', ['PizzaService', function(PizzaService){
   console.log('OrderController sourced!');
 
   var order = this;
-  var newPizzaOrder = {
-    size : '',
-    toppings : [],
-    total: 0
-  };
-  order.total = 0;
+  order.newPizzaOrder = PizzaService.newPizzaOrder;
+  // order.total = 0;
   order.pizzaObj = PizzaService.pizzaObj;
-  order.pizzaOrder = newPizzaOrder;
+  // order.pizzaOrder = newPizzaOrder;
 
 
   order.pizzaSize = function(size) {
     console.log('size chosen: ', size);
-    newPizzaOrder.size = size;
-    console.log(newPizzaOrder);
+    order.newPizzaOrder.size = size;
+    order.newPizzaOrder.total += size;
+
+    if (order.newPizzaOrder.size == 6) {
+      order.newPizzaOrder.size = 'Small';
+    } else if (order.newPizzaOrder.size == 7) {
+      order.newPizzaOrder.size = 'Medium';
+    } else if (order.newPizzaOrder.size == 8) {
+      order.newPizzaOrder.size = 'Large';
+    }
+    
+    console.log(order.newPizzaOrder);
 
     // newPizzaOrder.toppings.push(topping);
   };
 
   order.addTopping = function(topping){
-
-    console.log("the topping", topping);
-    newPizzaOrder.toppings.push(topping);
-    console.log("newPizzaOrder toppings array", newPizzaOrder.toppings);
-    console.log("newPizzaOrder", newPizzaOrder);
+    order.newPizzaOrder.toppings.push(topping);
+    order.newPizzaOrder.total += 1;
+    console.log("newPizzaOrder", order.newPizzaOrder);
   };
 
-
-  order.submitOrder = function(){
-    console.log("I'm trying to submit an order");
-    console.log("And this is the pizza I have for you.", newPizzaOrder);
-    var total = 0;
-    total = newPizzaOrder.size + newPizzaOrder.toppings.length;
-    console.log("total", total);
-    newPizzaOrder.total = total;
-    console.log("And this is the pizza I have for you.", newPizzaOrder);
-
-  };//ends pizzaTotal
+  order.submitOrder = PizzaService.submitOrder;
 
 }]);

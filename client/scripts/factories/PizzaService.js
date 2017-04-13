@@ -7,24 +7,36 @@ pizzaApp.factory('PizzaService', function() {
     lg: 8,
     toppings: toppings
   };
-  var orderedPizza = [];
-  var pizzaOrder = {};
+
+  var newPizzaOrder = {
+    size : '',
+    toppings : [],
+    total: 0
+  };
+
+  var orderedPizzas = [];
+
+  var pizzaOrder = {
+    orderedPizzas : orderedPizzas
+  };
 
 
-  function addPizzaToOrder(object){
-    console.log("inside addPizzaToOrder");
-    console.log("inside addPizzaToOrder pizza we are adding, object", object);
-    console.log("insdie addPizzaToOrder array of ordered pizzas, orderedPizza", orderedPizza);
-    var copy = angular.copy(object);
-    orderedPizza.push(copy);
-    console.log("inside addPizzaToOrder, copy of object, array of orders", copy, orderedPizza);
+  function submitOrder(){
+    console.log("inside addPizzaToOrder with: ", newPizzaOrder);
+    // console.log("insdie addPizzaToOrder array of ordered pizzas, orderedPizza", orderedPizzas);
+    var copy = angular.copy(newPizzaOrder);
+    orderedPizzas.push(copy);
+    console.log("inside addPizzaToOrder, copy of object, array of orders", copy, orderedPizzas);
+    newPizzaOrder = '';
+
   }//ends add PizzaToOrder
 
   return {
     pizzaObj: pizzaObj,
     pizzaOrder: pizzaOrder,
-    orderedPizza: orderedPizza,
-    addPizzaToOrder: addPizzaToOrder,
+    orderedPizzas: orderedPizzas,
+    submitOrder: submitOrder,
+    newPizzaOrder : newPizzaOrder
   };
 
 });

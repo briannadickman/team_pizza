@@ -3,9 +3,16 @@
 
 
 
-<div class="row" ng-repeat="pizzas in cart.pizzaOrder.order">
+<div class="row">
   <div class="col-md-12" >
-    <p>{{pizzas.size}} {{pizzas.toppings}} pizza - Total: ${{pizzas.total}}</p>
+    <div ng-repeat='pizzas in cart.pizzaOrder.orderedPizzas'>
+      {{pizzas.size}}
+      <span ng-repeat='topping in pizzas.toppings'>{{topping}}</span>
+      {{pizzas.total}}
+      <button class='btn btn-default'> Delete </button>
+      <button class='btn btn-default'> Confirm </button>
+    </div>
+
   </div>
 </div>
 <!-- will receive pizzaorder - inside will be array with all the order
