@@ -1,4 +1,4 @@
-pizzaApp.controller('HomeController', [function(){
+pizzaApp.controller('HomeController', ['PizzaService',function(PizzaService){
   console.log('HomeController sourced!');
 
   var home = this;

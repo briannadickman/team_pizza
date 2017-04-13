@@ -10,7 +10,7 @@ pizzaApp.controller('OrderController', ['PizzaService', function(PizzaService){
 
   order.pizzaObj = PizzaService.pizzaObj;
 
-  order.pizzaOrder = pizzaOrder;
+  order.pizzaOrder = newPizzaOrder;
 
 
   order.pizzaSize = function(size) {
