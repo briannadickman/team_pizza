@@ -18,7 +18,7 @@
     <div>
       <h3>Toppings:</h3>
       <div ng-repeat = 'topping in order.pizzaObj.toppings'>
-            <label class="checkbox-inline"><input type="checkbox" ng-click='order.submitOrder(topping)' >{{topping}}</label>
+            <label class="checkbox-inline"><input type="checkbox" ng-click='order.addTopping(topping)' >{{topping}}</label>
 
             <!-- <label class="checkbox-inline"><input type="checkbox" >Salmon</label>
             <label class="checkbox-inline"><input type="checkbox" >Mushroom</label>
