@@ -5,9 +5,6 @@ pizzaApp.controller('CartController', ['PizzaService', function(PizzaService){
   var cart = this;
 
   cart.test = PizzaService.test;
-  cart.pizzaObj = PizzaService.pizzaObj;
-
-
 
 
   cart.testPizzaOrder = function() {
@@ -28,7 +25,10 @@ pizzaApp.controller('CartController', ['PizzaService', function(PizzaService){
       order: pizzaArray};
 
     console.log(pizzaOrder);
+    return pizzaOrder;
 
   };
+
+
 
 }]);

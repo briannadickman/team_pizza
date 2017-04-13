@@ -1,18 +1,12 @@
 <h3>Ordered Pizzas</h3>
-<p>this is the cart screen second priority</p>
-<p>Ordered pizzas here</p>
 
 
-<h3>Ordered Pizzas</h3>
-<p>this is the cart screen second priority</p>
-<p>Ordered pizzas here</p>
 
-
-<div class="row">
-  <div class="col-md-12">
+<div class="row" ng-repeat="pizzas in cart.testPizzaOrder.pizzaOrder.pizzaArray">
+  <div class="col-md-12" >
     <p>{{cart.test}}</p>
-    <br>
-    <p>{{cart.pizzaObj.sm}}</p>
+    <p>{{pizzas}}</p>
+
   </div>
 </div>
 
@@ -20,12 +14,3 @@
 <!-- will receive pizzaorder - inside will be array with all the order
 
 pizzaorder{orderedPizza[{pizza}]} -->
-
-
-<div class="row">
-  <div class="col-md-12" ng-repeat="pizzas in pizzaOrder.pizzaArray">
-    <p>{{cart.pizzas}}</p>
-    <br>
-
-  </div>
-</div>
