@@ -1,3 +1,12 @@
 <h3>Ordered Pizzas</h3>
-<p>this is the cart screen second priority</p>
-<p>Ordered pizzas here</p>
+
+
+
+<div class="row" ng-repeat="pizzas in cart.pizzaOrder.order">
+  <div class="col-md-12" >
+    <p>{{pizzas.size}} {{pizzas.toppings}} pizza - Total: ${{pizzas.total}}</p>
+  </div>
+</div>
+<!-- will receive pizzaorder - inside will be array with all the order
+
+pizzaorder{orderedPizza[{pizza}]} -->
