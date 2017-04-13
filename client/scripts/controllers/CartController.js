@@ -1,6 +1,10 @@
-pizzaApp.controller('CartController', [function(){
-  console.log('CartController sourced!'); 
+
+pizzaApp.controller('CartController', ['PizzaService', function(PizzaService){
+  console.log('CartController sourced!');
 
   var cart = this;
+
+  cart.test = PizzaService.test;
+
 
 }]);
