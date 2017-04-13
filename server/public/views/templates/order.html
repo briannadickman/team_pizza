@@ -1,0 +1,39 @@
+<!-- ORDER CONTROLLER -->
+
+<h3 class='lead'>Order Your Pizza!</h3>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Choose a size
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <ul>
+          <li><a class="dropdown-item" ng-click='order.pizzaSize(order.pizzaObj.sm)'>Small</a></li>
+          <li><a class="dropdown-item" ng-click='order.pizzaSize(order.pizzaObj.md)'>Medium</a></li>
+          <li><a class="dropdown-item" ng-click='order.pizzaSize(order.pizzaObj.lg)'>Large</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>Toppings:</h3>
+      <div ng-repeat = 'topping in order.pizzaObj.toppings'>
+            <label class="checkbox-inline"><input type="checkbox" ng-click='order.addTopping(topping)' >{{topping}}</label>
+
+            <!-- <label class="checkbox-inline"><input type="checkbox" >Salmon</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mushroom</label>
+            <label class="checkbox-inline"><input type="checkbox" >Pineapple</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mashed Potatoes</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mac'n'Cheese</label>
+            <label class="checkbox-inline"><input type="checkbox" >Shrimp</label> -->
+      </div>
+    </div>
+    <div>
+      <button class = 'btn btn-default' ng-click="order.submitOrder()">Get Pizza</button>
+    </div>
+
+
+    <div>
+      <p>{{order.pizzaOrder.size}}</p>
+
+    </div>

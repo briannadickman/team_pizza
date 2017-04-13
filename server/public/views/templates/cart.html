@@ -1,0 +1,20 @@
+
+<h3>Ordered Pizzas</h3>
+
+
+
+<div class="row">
+  <div class="col-md-12" >
+    <div ng-repeat='pizzas in cart.pizzaOrder.orderedPizzas'>
+      {{pizzas.size}}
+      <span ng-repeat='topping in pizzas.toppings track by $index'>{{topping}}</span>
+      {{pizzas.total}}
+      <button class='btn btn-default'> Delete </button>
+      <button class='btn btn-default'> Confirm </button>
+    </div>
+
+  </div>
+</div>
+<!-- will receive pizzaorder - inside will be array with all the order
+
+pizzaorder{orderedPizza[{pizza}]} -->
