@@ -27,7 +27,9 @@ pizzaApp.factory('PizzaService', function() {
     var copy = angular.copy(newPizzaOrder);
     orderedPizzas.push(copy);
     console.log("inside addPizzaToOrder, copy of object, array of orders", copy, orderedPizzas);
-    newPizzaOrder = '';
+    newPizzaOrder.total = 0;
+    newPizzaOrder.toppings = [];
+    console.log('newPizzaOrder: ', newPizzaOrder);
 
   }//ends add PizzaToOrder
 
