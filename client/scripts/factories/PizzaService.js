@@ -1,6 +1,6 @@
 pizzaApp.factory('PizzaService', function() {
 
-  var toppings = ['salmon', 'mushroon', 'pineapple', 'macNcheese', 'shrimp'];
+  var toppings = ['salmon', 'mushroom', 'pineapple', 'mashed potatoes', 'macNcheese', 'shrimp'];
   var pizzaObj = {
     sm: 6,
     md: 7,

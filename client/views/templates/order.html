@@ -17,10 +17,23 @@
 
     <div>
       <h3>Toppings:</h3>
-            <label class="radio-inline"><input type="radio" name="optradio">Salmon</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Mushroom</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Pineapple</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Mashed Potatoes</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Mac'n'Cheese</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Shrimp</label>
+      <div ng-repeat = 'topping in order.pizzaObj.toppings'>
+            <label class="checkbox-inline"><input type="checkbox" ng-click='order.submitOrder(topping)' >{{topping}}</label>
+
+            <!-- <label class="checkbox-inline"><input type="checkbox" >Salmon</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mushroom</label>
+            <label class="checkbox-inline"><input type="checkbox" >Pineapple</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mashed Potatoes</label>
+            <label class="checkbox-inline"><input type="checkbox" >Mac'n'Cheese</label>
+            <label class="checkbox-inline"><input type="checkbox" >Shrimp</label> -->
+      </div>
+    </div>
+    <div>
+      <button class = 'btn btn-default' ng-click="order.submitOrder()">Get Pizza</button>
+    </div>
+
+
+    <div>
+      <p>{{order.pizzaOrder.size}}</p>
+
     </div>
