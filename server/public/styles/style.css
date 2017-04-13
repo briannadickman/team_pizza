@@ -27,3 +27,8 @@ ul{
 .dropdown {
   position: relative;
 }
+
+.jumbotron{
+  margin-top: 35px;
+  text-align: center;
+}

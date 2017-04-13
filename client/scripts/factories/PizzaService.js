@@ -1,16 +1,15 @@
 pizzaApp.factory('PizzaService', function() {
+
+  var toppings = ['salmon', 'mushroon', 'pineapple', 'macNcheese', 'shrimp'];
   var pizzaObj = {
     sm: 6,
     md: 7,
     lg: 8,
     toppings: toppings
   };
-
-  var toppings = ['salmon', 'mushroon', 'pineapple', 'macNcheese', 'shrimp'];
-
-  //toppings: salmon, mushroom, pinneapple, macNcheese, shrimp
-  var pizzaOrder = {};
   var orderedPizza = [];
+  var pizzaOrder = {};
+
 
   function addPizzaToOrder(object){
     console.log("inside addPizzaToOrder");
@@ -25,7 +24,6 @@ pizzaApp.factory('PizzaService', function() {
     pizzaObj: pizzaObj,
     pizzaOrder: pizzaOrder,
     addPizzaToOrder: addPizzaToOrder,
-    orderedPizza: orderedPizza
   };
 
 });
