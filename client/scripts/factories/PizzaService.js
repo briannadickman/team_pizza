@@ -6,6 +6,7 @@ pizzaApp.factory('PizzaService', function() {
     md: 7,
     lg: 8
   };
+  
   var toppings = [];
   //toppings: salmon, mushroom, pinneapple, macNcheese, shrimp
   var pizzaOrder = {};
