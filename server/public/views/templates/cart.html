@@ -2,15 +2,11 @@
 
 
 
-<div class="row" ng-repeat="pizzas in cart.testPizzaOrder.pizzaOrder.pizzaArray">
+<div class="row" ng-repeat="pizzas in cart.pizzaOrder.order">
   <div class="col-md-12" >
-    <p>{{cart.test}}</p>
-    <p>{{pizzas}}</p>
-
+    <p>{{pizzas.size}} {{pizzas.toppings}} pizza - Total: ${{pizzas.total}}</p>
   </div>
 </div>
-
-
 <!-- will receive pizzaorder - inside will be array with all the order
 
 pizzaorder{orderedPizza[{pizza}]} -->
