@@ -1,16 +1,41 @@
-# team_pizza
+# Team Pizza
+#### Group Project 
 
-Pizza Ordering Application
-In this group project, you are going to be building an order application for a Pizza Restaurant! You may use the base project to start, but you are responsible for building out all the Angular Routes, Controllers, and Factories. A Database will not be used in this application, but you are certainly welcome to add one in your free time!
+An application made through group collaboration and for understanding of the MVC model. This was the first project made after learning about factories and controllers. The purpose of the application is to create a pizza ordering app.
 
-Base Mode
-For the base mode, you will need two Angular Views via Angular Routes.
+## Getting Started
 
-The first will be the actual order screen. Users can select from Small, Medium, or Large sized pizzas. These each need to have a unique price ( $6, $7, and $8 respectively for example ). Then, a user can add additional toppings. You need to have at least 6 toppings. Each topping will add $1 to the total cost of the pizza. A user may only add one of each topping and certainly only select one size. Finally, there needs to be an ' add pizza ' button that adds the pizza to a factory list so that it may be seen on another Angular Route.
+Clone or download this repository to get started using Team Pizza.
 
-The other view (Other Angular Route), needs to show a list of pizzas that have been added. It will need to show the size of the pizza, its toppings, and the total cost of that pizza. Each listed pizza should have two buttons, one to confirm the pizza, the other to cancel the pizza. Canceled pizzas should be deleted altogether. Confirmed pizzas should move to another list in this view.
+### Prerequisites & Installing
 
-Hard Mode
-Forget that last line. Instead of pizzas going to another place on the previous view, create a whole new view altogether. The third and final view should have a list of confirmed pizzas, their totals, and then a grand total of confirmed pizzas.
+To get started using this application, you will need to make sure you have the latest versions of all dependent languages and frameworks. To download these or make sure you are up to date, open terminal, navigate to the folder containing the app and type:
 
-NOTE THAT ALL OTHER DETAILS CAN BE DECIDED ON BY THE GROUP
+```
+npm install
+```
+
+This will automatically install all the dependencies the application has. To start and run the application, type:
+
+```
+npm start
+```
+
+And navigate to localhost:5000. 
+Voila! You are now able to use this program!
+
+Try creating a few different styles and flavors of pizzas!
+
+## Built With
+
+* [MEAN stack] (http://mean.io/) - Full-stack Javascript Framework
+* [Bootstrap] (http://getbootstrap.com/) - Styling
+
+## Contributing
+
+Contributions from Keith Tomlinson and Anisa Abdulkadir.
+
+## Authors
+
+* **Brianna Dickman** - (https://github.com/briannadickman)
+
